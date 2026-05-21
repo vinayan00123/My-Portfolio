@@ -49,7 +49,7 @@ export default function About() {
               </div>
               <div className="p-4 font-mono text-sm">
                 <p className="text-slate-300"><span className="text-green-400 mr-2">$</span>whoami</p>
-                <p className="text-cyan-400 mb-2">&gt; vinay_kumar</p>
+                <p className="text-cyan-400 mb-2">&gt; vinayan_B</p>
                 <p className="text-slate-300"><span className="text-green-400 mr-2">$</span>cat status.txt</p>
                 <p className="text-cyan-400 mb-2">&gt; Seeking full-time roles & internships</p>
                 <p className="text-slate-300"><span className="text-green-400 mr-2">$</span>echo $GOAL</p>
