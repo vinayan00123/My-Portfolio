@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "69fb0613178d9bf8c53dfb98",
+    "name": "Budgeted - Shared Expense Tracker",
+    "description": "Budgeted is a TypeScript-based shared expense tracker for collaborative financial management, created 11 days ago as a public repository with no external contributions yet.",
+    "techStack": [
+      "React",
+      "Node.js",
+      "TypeScript"
+    ],
+    "tags": [
+      "Web",
+      "Backend"
+    ],
+    "isFeatured": false,
+    "githubUrl": "https://github.com/vinayan00123/budgeted---shared-expense-tracker.git",
+    "liveUrl": "https://vinayan00123.github.io/budgeted---shared-expense-tracker/",
+    "imageUrl": "/uploads/1778058771620.png",
+    "createdAt": "2026-05-06T09:12:51.677Z",
+    "__v": 0
+  }
+]

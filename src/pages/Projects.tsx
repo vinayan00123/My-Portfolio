@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import ProjectCard from '../components/ProjectCard.tsx';
+import staticProjects from '../data/projects.json';
 
 export default function Projects() {
   const [projects, setProjects] = useState<any[]>([]);
@@ -19,11 +20,14 @@ export default function Projects() {
       if (isApiRoute && contentType && contentType.includes('application/json')) {
         const data = await res.json();
         if (res.ok) {
-          setProjects(Array.isArray(data) ? data : []);
+          setProjects(Array.isArray(data) && data.length > 0 ? data : staticProjects);
+          return;
         }
       }
+      setProjects(staticProjects);
     } catch (err) {
       console.error('Fetch Projects List Error:', err);
+      setProjects(staticProjects);
     } finally {
       setLoading(false);
     }
