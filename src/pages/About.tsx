@@ -34,7 +34,7 @@ export default function About() {
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
               </div>
-              <img src="/profile_img.jpg" alt="Profile" className="w-full object-cover max-h-80" />
+              <img src={`${import.meta.env.BASE_URL}profile_img.jpg`} alt="Profile" className="w-full object-cover max-h-80" />
             </div>
 
             {/* Terminal Window */}

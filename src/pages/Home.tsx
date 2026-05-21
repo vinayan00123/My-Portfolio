@@ -6,10 +6,9 @@ export default function Home() {
   return (
     <div className="w-full relative">
       
-      {/* Home Specific Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-[0.4]"
-        style={{ backgroundImage: 'url(/hero_bg.jpg)' }}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero_bg.jpg)` }}
       />
       {/* Gradient to fade into the solid black of the next sections */}
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/60 to-black" />
