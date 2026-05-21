@@ -42,7 +42,15 @@ export default function Navbar() {
           href={href}
           onClick={(e) => {
             e.preventDefault();
-            document.getElementById(sectionName)?.scrollIntoView({ behavior: 'smooth' });
+            const element = document.getElementById(sectionName);
+            if (element) {
+              const offset = sectionName === 'home' ? 0 : 80;
+              const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+              });
+            }
             setIsOpen(false);
           }}
           className={`${className} ${isActive ? 'text-white' : 'text-gray-400 hover:text-white'}`}
@@ -66,10 +74,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-transparent sticky top-0 z-50 pt-4">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center bg-slate-900/40 backdrop-blur-md rounded-full border border-slate-800">
-        <NavItem href="#home" className="flex items-center gap-2 group ml-4">
-          <span className="text-cyan-500 font-bold text-xl tracking-tight">vinaycode</span>
+    <nav className="w-full bg-black/10 backdrop-blur-md border-b border-slate-900/30 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 py-3.5 flex justify-between items-center">
+        <NavItem href="#home" className="flex items-center transition-transform duration-200 hover:scale-105">
+          <span className="font-display text-2xl tracking-tight text-white font-medium">
+            vinay<span className="text-cyan-400 font-extrabold">code</span>
+          </span>
         </NavItem>
 
         {/* Desktop Nav */}
@@ -93,7 +103,7 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden mt-2 mx-6 rounded-2xl border border-slate-800 bg-slate-900/95 backdrop-blur-md p-4">
+        <div className="md:hidden mt-1 mx-6 rounded-xl border border-slate-800 bg-[#09090b]/95 backdrop-blur-md p-4 mb-4">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <NavItem

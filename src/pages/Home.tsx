@@ -7,8 +7,8 @@ export default function Home() {
     <div className="w-full relative">
       
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-[0.4]"
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero_bg.jpg)` }}
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-[0.25]"
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}bg.png)` }}
       />
       {/* Gradient to fade into the solid black of the next sections */}
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/60 to-black" />
@@ -43,9 +43,9 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-slate-400 font-medium mb-8 tracking-wide"
+          className="font-mono text-sm mb-8 tracking-wider text-slate-400"
         >
-          @vinaycode
+          @<span className="text-cyan-400 font-semibold">vinay</span>code
         </motion.p>
         
         {/* Description */}

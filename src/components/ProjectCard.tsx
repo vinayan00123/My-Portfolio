@@ -21,7 +21,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, isAdmin, onDelete, onEdit }: ProjectCardProps) {
   return (
-    <div className="term-card flex flex-col h-full bg-[#09090b] border border-slate-800 rounded-2xl p-6 transition-all hover:border-slate-700 shadow-lg">
+    <div className="term-card flex flex-col h-full bg-[#050505]/40 border border-slate-900/60 rounded-2xl p-6 transition-all duration-300 hover:border-cyan-500/30 hover:bg-[#0b1523]/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]">
       
       {/* Header */}
       <div className="flex justify-between items-start mb-4">
